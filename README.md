@@ -1,12 +1,17 @@
 Shared libraries
 ==================
 
-### PDFJS
+### PDFJS (./pdfjs/*)
 
 https://mozilla.github.io/pdf.js/
 
 Apache License
 
+### PDFJs (./pdfjs.js)
+
+https://github.com/rkusa/pdfjs
+
+MIT License
 
 
 ### js-xlsx
