@@ -7483,8 +7483,14 @@ TTFFont.prototype.save = function() {
 
   // file checksum
   var sum = 0
-  for (var i = 0; i < size; i += 4)
-    sum += view.getInt32(i)
+  try{
+    for (var i = 0; i < size; i += 4)
+      sum += view.getInt32(i)
+  }
+  catch(error){
+    sum = 0;
+  }
+
   this.tables.head.checkSumAdjustment = 0xB1B0AFBA - sum
   this.tables.head.pack(view, this.directory.entries.head.offset)
 
